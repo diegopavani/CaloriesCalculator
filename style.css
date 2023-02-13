@@ -1,3 +1,32 @@
 body {
     background-color: azure;
 }
+
+button {
+    display: block;
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.mt-5 {
+    margin-top: 15%;
+}
+
+.yellow {
+    color: rgba(226, 212, 9, 0.877);
+}
+
+.blue {
+    color:rgba(8, 33, 255, 0.877);
+}
+
+.green {
+    color:rgba(46, 196, 0, 0.877);
+}

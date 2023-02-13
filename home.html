@@ -6,8 +6,158 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </head>
     <body>
-        Oi
+        <div class="container">
+            <form autocomplete="off" id="form-1">
+                <div class="row mt-5">
+                    <div class="column">
+                        <h1 class="text-center">What's your goal?</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <button class="button button-outline" onclick="$('#form-1').fadeOut(); $('#form-2').delay(1000).fadeIn();">Gain muscles</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <button class="button button-outline" onclick="$('#form-1').fadeOut(); $('#form-2').delay(1000).fadeIn();">Keep my weight</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <button class="button button-outline" onclick="$('#form-1').fadeOut(); $('#form-2').delay(1000).fadeIn();">Weight loss</button>
+                    </div>
+                </div>
+            </form>
+
+            <form autocomplete="off" id="form-2">
+                <div class="row mt-5">
+                    <div class="column">
+                        <h1 class="text-center">We need some info to start</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <input type="text" placeholder="Age" id="age" autofocus required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <input type="text" placeholder="Height (Cm)" id="height" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <input type="text" placeholder="Weight (Kg)" id="weight" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <input type="text" placeholder="% Fatness (Optional)" id="fatness">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <button class="button" onclick="$('#form-2').fadeOut(); $('#form-3').delay(1000).fadeIn();">Continue</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <button class="button button-outline" onclick="$('#form-2').fadeOut(); $('#form-1').delay(1000).fadeIn();">Back</button>
+                    </div>
+                </div>
+            </form>
+
+            <form autocomplete="off" id="form-3">
+                <div class="row mt-5">
+                    <div class="column">
+                        <h1 class="text-center">You have a job? How many hours you work?</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <select id="work" required>
+                            <option value="0">Don't have job</option>
+                            <option value="6">6 hours a day</option>
+                            <option value="8">8 hours a day</option>
+                            <option value="8+">More then 8 hours a day</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <button class="button" onclick="$('#form-3').fadeOut(); $('#form-4').delay(1000).fadeIn();">Continue</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <button class="button button-outline" onclick="$('#form-3').fadeOut(); $('#form-2').delay(1000).fadeIn();">Back</button>
+                    </div>
+                </div>
+            </form>
+
+            <form autocomplete="off" id="form-4">
+                <div class="row mt-5">
+                    <div class="column">
+                        <h1 class="text-center">You go to the gym? How many hours you workout?</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <select id="work" required>
+                            <option value="0">I don't do workouts</option>
+                            <option value="1-">Less then 1 hour a day</option>
+                            <option value="1">1 hour a day</option>
+                            <option value="1+">More then 1 hours a day</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <button class="button" onclick="$('#form-4').fadeOut(); $('#results').delay(1000).fadeIn();">Continue</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-50 column-offset-25">
+                        <button class="button button-outline" onclick="$('#form-4').fadeOut(); $('#form-3').delay(1000).fadeIn();">Back</button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="results">
+                <div class="row mt-5">
+                    <div class="column">
+                        <h1 class="text-center">That's are your results!</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h3 class="text-center">You need <text class="text-bold">X</text> calories per day to reach your goal</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h3 class="text-center">They are divided by:</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column column-25 column-offset-10">
+                        <h3 class="text-center green">X carbs</h3>
+                    </div>
+
+                    <div class="column column-25">
+                        <h3 class="text-center blue">X protein</h3>
+                    </div>
+
+                    <div class="column column-25">
+                        <h3 class="text-center yellow">X fat</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
