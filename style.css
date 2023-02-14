@@ -19,6 +19,14 @@ button {
     margin-top: 15%;
 }
 
+.ml-5 {
+    margin-left: 15%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .yellow {
     color: rgba(226, 212, 9, 0.877);
 }
