@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('#results').hide();
 });
 
-let goal, age, h, w, fat, work;
+let goal, age, h, w, fat, work, gym, others;
 
 function gain() {
     goal = "gain"
@@ -65,9 +65,12 @@ function form_3(next) {
 
 function form_4(next) {
     if (next) {
+        gym = $('#gym').val();
+        others = $('#check').val();
         $('#form-4').fadeOut();
         $('#results').delay(800).fadeIn();
     } else {
+        gym=null, others=null;
         $('#form-4').fadeOut();
         $('#form-3').delay(800).fadeIn();
     }
