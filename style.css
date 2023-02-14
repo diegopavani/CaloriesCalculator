@@ -2,7 +2,7 @@ body {
     background-color: azure;
 }
 
-button {
+a {
     display: block;
     width: 100%;
 }
