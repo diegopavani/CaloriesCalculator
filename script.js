@@ -5,7 +5,8 @@ $(document).ready(function () {
     $('#results').hide();
 });
 
-let goal, age, h, w, fat;
+let goal, age, h, w, fat, work;
+
 function gain() {
     goal = "gain"
     $('#form-1').fadeOut();
@@ -14,6 +15,7 @@ function gain() {
     $('#height').val("");
     $('#weight').val("");
 }
+
 function keep() {
     goal = "keep"
     $('#form-1').fadeOut();
@@ -22,6 +24,7 @@ function keep() {
     $('#height').val("");
     $('#weight').val("");
 }
+
 function loss() {
     goal = "loss"
     $('#form-1').fadeOut();
@@ -37,11 +40,12 @@ function form_2(next) {
             age = $('#age').val();
             h = $('#height').val();
             w = $('#weight').val();
+            fat = $('#fatness').val();
             $('#form-2').fadeOut();
             $('#form-3').delay(800).fadeIn();
         }
     } else {
-        age=null, h=null, w=null;
+        age=null, h=null, w=null, fat=null;
         $('#form-2').fadeOut();
         $('#form-1').delay(800).fadeIn();
     }
@@ -49,9 +53,11 @@ function form_2(next) {
 
 function form_3(next) {
     if (next) {
+        work = $('#work').val();
         $('#form-3').fadeOut();
         $('#form-4').delay(800).fadeIn();
     } else {
+        work=null;
         $('#form-3').fadeOut();
         $('#form-2').delay(800).fadeIn();
     }
