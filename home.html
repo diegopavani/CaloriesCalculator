@@ -19,17 +19,17 @@
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <button type="button" class="button button-outline" onclick="$('#form-1').fadeOut(); $('#form-2').delay(1000).fadeIn();">Gain muscles</button>
+                        <button type="button" class="button button-outline" onclick=gain()>Gain muscles</button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <button type="button" class="button button-outline" onclick="$('#form-1').fadeOut(); $('#form-2').delay(1000).fadeIn();">Keep my weight</button>
+                        <button type="button" class="button button-outline" onclick=keep()>Keep my weight</button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <button type="button" class="button button-outline" onclick="$('#form-1').fadeOut(); $('#form-2').delay(1000).fadeIn();">Weight loss</button>
+                        <button type="button" class="button button-outline" onclick=loss()>Weight loss</button>
                     </div>
                 </div>
             </form>
@@ -42,32 +42,32 @@
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <input type="text" placeholder="Age" id="age" autofocus>
+                        <input placeholder="Age" id="age" type="number" min="1" step="1" autofocus>
                     </div>
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <input type="text" placeholder="Height (Cm)" id="height">
+                        <input placeholder="Height (Cm)" type="number" min="1" step="0.01" id="height">
                     </div>
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <input type="text" placeholder="Weight (Kg)" id="weight">
+                        <input placeholder="Weight (Kg)" type="number" min="1" step="0.01" id="weight">
                     </div>
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <input type="text" placeholder="% Fatness (Optional)" id="fatness">
+                        <input placeholder="% Fatness (Optional)" type="number" min="1" step="0.01" id="fatness">
                     </div>
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <button type="button" class="button" onclick="$('#form-2').fadeOut(); $('#form-3').delay(1000).fadeIn();">Continue</button>
+                        <button type="button" class="button" onclick=form_2(true)>Continue</button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <button type="button" class="button button-outline" onclick="$('#form-2').fadeOut(); $('#form-1').delay(1000).fadeIn();">Back</button>
+                        <button type="button" class="button button-outline" onclick=form_2(false)>Back</button>
                     </div>
                 </div>
             </form>
@@ -90,12 +90,12 @@
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <button type="button" class="button" onclick="$('#form-3').fadeOut(); $('#form-4').delay(1000).fadeIn();">Continue</button>
+                        <button type="button" class="button" onclick=form_3(true)>Continue</button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <button type="button" class="button button-outline" onclick="$('#form-3').fadeOut(); $('#form-2').delay(1000).fadeIn();">Back</button>
+                        <button type="button" class="button button-outline" onclick=form_3(false)>Back</button>
                     </div>
                 </div>
             </form>
@@ -129,12 +129,12 @@
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <button type="button" class="button" onclick="$('#form-4').fadeOut(); $('#results').delay(1000).fadeIn();">Continue</button>
+                        <button type="button" class="button" onclick=form_4(true)>Continue</button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25">
-                        <button type="button" class="button button-outline" onclick="$('#form-4').fadeOut(); $('#form-3').delay(1000).fadeIn();">Back</button>
+                        <button type="button" class="button button-outline" onclick=form_4(false)>Back</button>
                     </div>
                 </div>
             </form>
