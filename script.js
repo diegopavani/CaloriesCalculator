@@ -5,7 +5,7 @@ $(document).ready(function () {
     $('#results').hide();
 });
 
-let goal, age, h, w, fat, work, gym, others;
+let goal, age, h, w, fat, work, gym, others, tmr, met, cal, p, f, c;
 
 function gain() {
     goal = "gain"
@@ -74,4 +74,18 @@ function form_4(next) {
         $('#form-4').fadeOut();
         $('#form-3').delay(800).fadeIn();
     }
+}
+
+function result(){
+    if(fat){
+        tmr = (19.7*(w-(w*(fat/100))))+413;
+    }else{
+        tmr = 66,4730+(13,7516*w)+(5,0033*h)-(6,75550*age);
+    }
+
+    met = (1.5*work*w)+(6*gym*w)+(5*1*w);
+
+    if(goal==="loss") cal = (tmr*1.2)+met-500;
+    if(goal==="keep") cal = (tmr*1.2)+met;
+    if(goal==="gain") cal = (tmr*1.2)+met+1000;
 }
