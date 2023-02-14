@@ -110,7 +110,7 @@
                     <div class="column column-50 column-offset-25">
                         <select id="gym">
                             <option value="0">I don't do workouts</option>
-                            <option value="-1">Less then 1 hour a day</option>
+                            <option value="0.5">Less then 1 hour a day</option>
                             <option value="1">1 hour a day</option>
                             <option value="2">More then 1 hour a day</option>
                         </select>
@@ -123,8 +123,8 @@
                 </div>
                 <div class="row">
                     <div class="column column-50 column-offset-25 text-center">
-                        <input type="radio" class="cursor-pointer" id="check" name="other" value="YES">YES &nbsp
-                        <input type="radio" class="cursor-pointer" id="check" name="other" value="NO" checked>NO
+                        <input type="radio" class="cursor-pointer" name="check" value="YES">YES &nbsp
+                        <input type="radio" class="cursor-pointer" name="check" value="NO" checked>NO
                     </div>
                 </div>
                 <div class="row">
@@ -147,7 +147,7 @@
                 </div>
                 <div class="row">
                     <div class="column">
-                        <h3 class="text-center">You need <text class="text-bold">X</text> calories per day to reach your goal</h3>
+                        <h3 id="cal" class="text-center"></h3>
                     </div>
                 </div>
                 <div class="row">
@@ -157,15 +157,15 @@
                 </div>
                 <div class="row">
                     <div class="column column-25 column-offset-10">
-                        <h3 class="text-center green">X carbs</h3>
+                        <h3 id="carbs" class="text-center green"></h3>
                     </div>
 
                     <div class="column column-25">
-                        <h3 class="text-center blue">X protein</h3>
+                        <h3 id="protein" class="text-center blue"></h3>
                     </div>
 
                     <div class="column column-25">
-                        <h3 class="text-center yellow">X fat</h3>
+                        <h3 id="fat" class="text-center yellow"></h3>
                     </div>
                 </div>
             </div>

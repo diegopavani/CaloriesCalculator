@@ -66,8 +66,9 @@ function form_3(next) {
 function form_4(next) {
     if (next) {
         gym = $('#gym').val();
-        others = $('#check').val();
+        others = $('input[name=check]:checked', '#form-4').val();
         $('#form-4').fadeOut();
+        result();
         $('#results').delay(800).fadeIn();
     } else {
         gym=null, others=null;
@@ -82,10 +83,23 @@ function result(){
     }else{
         tmr = 66,4730+(13,7516*w)+(5,0033*h)-(6,75550*age);
     }
-
-    met = (1.5*work*w)+(6*gym*w)+(5*1*w);
-
+    
+    if(others) {
+        met = (1.5*work*w)+(6*gym*w)+(5*1*w);
+    } else {
+        met = (1.5*work*w)+(6*gym*w);
+    }
+    
     if(goal==="loss") cal = (tmr*1.2)+met-500;
     if(goal==="keep") cal = (tmr*1.2)+met;
     if(goal==="gain") cal = (tmr*1.2)+met+1000;
+
+    protein = 2*w;
+    fat = (0.25*cal) / 9;
+    carb = 7*w;
+
+    $("#carbs").html(Math.round(carb)+" grams of carbs");
+    $("#protein").html(Math.round(protein)+" grams of proteins");
+    $("#fat").html(Math.round(fat)+" grams of fats");
+    $("#cal").html("You need "+Math.round(cal)+" calories per day to reach your goal");
 }
