@@ -6,3 +6,8 @@ This application calculates the amount of carbohydrates, proteins and lipids tha
 Developed using HTML, CSS, JavaScript, JQuery and Milligram.
 ## Execution
 Open the file home.html in your browser.
+
+##
+<div align="center">  
+  <img src="https://cdn.discordapp.com/attachments/1076157666986049598/1076207483229585448/calcal.png" alt="Calculator preview" /> 
+</div>
